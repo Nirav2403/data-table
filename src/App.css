@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+.active{
+  animation: modaldown 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes modaldown {
+  0%{transform: scale(1);}
+  100%{transform: scale(0); }
+} */
+
+#modal-container{
+  height: 50%;
+  width: 40%;
+  padding: 1rem;
+  background-color: #B1FFFD;
+  position: fixed;
+  top:15%;
+  left: 30%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content auto;
+  grid-gap: 1rem;
+  animation: modalover 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes modalover {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+.close-btn{
+  padding: 0.3rem 0.8rem;
+  place-self: center end;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: #6F69AC;
+  color: white;
+}
+
+.update-btn{
+  padding: 0.5rem 0.8rem;
+  margin: 0.2rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  font-weight: 800;
+  background-color: #F78812;
+  color: white;
+}
+
+#modal-container form{
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(7,max-content);
+  grid-gap: 0.3rem;
+  /* place-items: center; */
+  place-self: center;
+}
+
+#modal-container form input{
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem;
+}
+#modal-container form button{
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  place-self: center end;
+  background-color: #4a3ce4;
+  color: white;
+  font-weight: 800;
+}
